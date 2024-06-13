@@ -10,7 +10,7 @@ from langchain.memory import ConversationBufferMemory
 from langchain.chains import ConversationalRetrievalChain
 from langchain.llms import HuggingFaceHub, HuggingFacePipeline
 import openai
-
+import os
 
 
 ##!pip install streamlit PdfReader load_dotenv torch PyPDF2 -U langchain-community openai faiss-cpu
@@ -53,7 +53,7 @@ def get_conversation_chain(vectorstore):
     )
     return conversation_chain
 
-import os
+
 # Set the environment variable for OPENAI_API_KEY
 api_key = ''
 os.environ['OPENAI_API_KEY'] = api_key
